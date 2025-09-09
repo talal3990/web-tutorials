@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Hiring Portal</title>
+  <link rel="stylesheet" href="talal.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Job Hiring Portal</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#post-job">Post a Job</a>
+      <a href="#auth">Login / Register</a>
+    </nav>
+  </header>
+
+  <!-- Job Search Section -->
+  <section class="search">
+    <h2>Find Your Dream Job</h2>
+    <input type="text" placeholder="Job title, keywords...">
+    <input type="text" placeholder="Location">
+    <button>Search</button>
+  </section>
+
+  <!-- Job Listings -->
+  <section class="jobs" id="jobs">
+    <h2>Latest Jobs</h2>
+    <div class="job-grid">
+      <div class="job-card">
+        <h3>Frontend Developer</h3>
+        <p><strong>Company:</strong> ABC Tech</p>
+        <p><strong>Location:</strong> Remote</p>
+        <button>Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h3>QA Engineer</h3>
+        <p><strong>Company:</strong> XYZ Ltd.</p>
+        <p><strong>Location:</strong> New York</p>
+        <button>Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h3>Backend Developer</h3>
+        <p><strong>Company:</strong> DevCorp</p>
+        <p><strong>Location:</strong> London</p>
+        <button>Apply</button>
+      </div>
+
+      <div class="job-card">
+        <h3>UI/UX Designer</h3>
+        <p><strong>Company:</strong> Creative Studio</p>
+        <p><strong>Location:</strong> San Francisco</p>
+        <button>Apply</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Posting Form -->
+  <section class="form-section" id="post-job">
+    <h2>Post a Job</h2>
+    <form>
+      <label for="title">Job Title:</label>
+      <input type="text" id="title" placeholder="e.g. Software Engineer" required>
+
+      <label for="company">Company Name:</label>
+      <input type="text" id="company" placeholder="e.g. ABC Tech" required>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" placeholder="e.g. Remote / New York" required>
+
+      <label for="desc">Job Description:</label>
+      <textarea id="desc" rows="4" placeholder="Enter job details..." required></textarea>
+
+      <button type="submit">Post Job</button>
+    </form>
+  </section>
+
+  <!-- Auth Section: Login/Register Tabs -->
+  <section class="form-section" id="auth">
+    <h2>User Access</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showForm('login')">Login</button>
+      <button class="tab-btn" onclick="showForm('register')">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="login-form" class="auth-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="register-form" class="auth-form hidden">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" placeholder="Enter your full name" required>
+
+      <label for="reg-email">Email:</label>
+      <input type="email" id="reg-email" placeholder="Enter your email" required>
+
+      <label for="reg-password">Password:</label>
+      <input type="password" id="reg-password" placeholder="Create a password" required>
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" placeholder="Re-enter your password" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Job Hiring Portal | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function showForm(form) {
+      const loginForm = document.getElementById("login-form");
+      const registerForm = document.getElementById("register-form");
+      const tabBtns = document.querySelectorAll(".tab-btn");
+
+      if (form === "login") {
+        loginForm.classList.remove("hidden");
+        registerForm.classList.add("hidden");
+        tabBtns[0].classList.add("active");
+        tabBtns[1].classList.remove("active");
+      } else {
+        registerForm.classList.remove("hidden");
+        loginForm.classList.add("hidden");
+        tabBtns[1].classList.add("active");
+        tabBtns[0].classList.remove("active");
+      }
+    }
+  </script>
+</body>
+</html>
