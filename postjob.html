@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job - Job Hiring Portal</title>
+  <link rel="stylesheet" href="talal.css">
+</head>
+<body>
+  <header>
+    <h1>Job Hiring Portal</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="post-job.html">Post a Job</a>
+      <a href="auth.html">Login / Register</a>
+    </nav>
+  </header>
+
+  <section class="post-job">
+    <h2>Post a New Job</h2>
+    <form onsubmit="postJob(event)">
+      <input type="text" id="jobTitle" placeholder="Job Title" required>
+      <input type="text" id="jobLocation" placeholder="Location" required>
+      <input type="text" id="jobSalary" placeholder="Salary" required>
+      <button type="submit">Post Job</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Job Hiring Portal | All Rights Reserved</p>
+  </footer>
+
+  <script src="talal.js"></script>
+</body>
+</html>

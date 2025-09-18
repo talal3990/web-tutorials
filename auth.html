@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication - Job Hiring Portal</title>
+  <link rel="stylesheet" href="talal.css">
+</head>
+<body>
+  <header>
+    <h1>Job Hiring Portal</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="post-job.html">Post a Job</a>
+      <a href="auth.html">Login / Register</a>
+    </nav>
+  </header>
+
+  <section class="auth">
+    <h2>Login / Register</h2>
+    <div class="tabs">
+      <button onclick="showAuthForm('login')">Login</button>
+      <button onclick="showAuthForm('register')">Register</button>
+    </div>
+
+    <div id="loginForm" class="auth-form">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button>Login</button>
+    </div>
+
+    <div id="registerForm" class="auth-form" style="display: none;">
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button>Register</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Job Hiring Portal | All Rights Reserved</p>
+  </footer>
+
+  <script src="talal.js"></script>
+</body>
+</html>
